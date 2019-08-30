@@ -1,3 +1,24 @@
+As modern browsers do NOT allow cross origin requests by default and Flickr feed doesnt provide the CORS accept header (........) in the response, to be able to run the website it is needed to go run your browser in a mode that skips the CORS check.
+
+Here is a way to make it on Chrome:
+1. Create a shortcut of Chrome and edit it.
+2. In Target add following params: --disable-web-security --user-data-dir="c:/chromedev"
+   i.e. it should look like this:
+     "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --user-data-dir="c:/chromedev"
+3. Save it.
+4. Run it and use this instance of the Chrome browser to test the React API.
+
+
+Note:
+As we cannot change the headers in http response from Flickr API, the best approach to make the project will be to server side download (on our server) the feed and the images from Flickr server and then stream them back to the browser from our server. But this will require a lot more work than just making a web api, it is a full stack development, and as the task requirement is "to build a web app", I havent gone that path.
+
+Another way to make it is to use external proxy to load the resources (feed and images) from the Flickr API, but this is not the best approach as first it is not the safest way to go and second proxy always adds overhead in speed.
+
+
+
+
+Here is initial readme file that explains how to start the React App:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

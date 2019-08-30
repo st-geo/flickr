@@ -1,4 +1,4 @@
-As modern browsers do NOT allow cross origin requests by default and Flickr feed doesnt provide the CORS accept header (........) in the response, to be able to run the website it is needed to go run your browser in a mode that skips the CORS check.
+As modern browsers do NOT allow cross origin requests by default and Flickr feed doesnt provide the CORS accept header (Access-Control-Allow-Origin: *) in the response, to be able to run the website it is needed to go run your browser in a mode that skips the CORS check.
 
 Here is a way to make it on Chrome:
 1. Create a shortcut of Chrome and edit it.
